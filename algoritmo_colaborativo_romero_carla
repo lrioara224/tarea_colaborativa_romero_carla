@@ -5,15 +5,14 @@ Algoritmo porcentajes
 	Escribir "Ingrese  la cantidad de niñas en el curso actual:"
 	Leer niñas
 	//Hacemos lo mismo, pero esta vez, este número corresponde con las niñas que hay en la clase//
-	Total= Niños-niñas
-	//Se suma la cantidad de los niños y de las niñas//
-	Res1=(100/niñas)*Total
-	//Para saber el porcentaje de las niñas, multiplicamos el número de niñas que hemos introducido y lo multiplicamos por 100. El resultado se divide entre el total de números de niños y de niñas//
-	Res2=(100/niños)*Total
-	//Para saber el porcentaje de las niños, multiplicamos el número de niños que hemos introducido y lo multiplicamos por 100. El resultado se divide entre el total de números de niños y de niñas//
-	Escribir "El porcentaje de niños en el aula es: ",TRUNC(res2),"%"
-	//Te da el resultado del número de niños en %, al utilizar la función REDOND, nos redondea el resultado//
-	Escribir "El porcentaje de niñas en el aula es: ",TRUNC(res1),"%"
-	//Te da el resultado del número de niñas en %, al utilizar la función REDOND, nos redondea el resultado//
+	Total= Niños+niñas //+ Aquí sería una suma, ya que se trata de calcular el total de la clase
+	Res1=(100*niñas)/Total
+	//+Te has equivocado, lo has hecho al revés. Hay que multiplicar 100 por el número de niñas y luego se divide entre el total de la clase.
+	Res2=(100*niños)/Total 
+	//Aquí te ha pasado lo mismo
+	Escribir "El porcentaje de niños en el aula es: ",REDON(res2),"%"
+	//+Aquí había que utilizar la función REDON, para redondear el resultado, no la de TRUNC
+	Escribir "El porcentaje de niñas en el aula es: ",REDON(res1),"%"
+	//Aquí lo mismo
 	
 FinAlgoritmo
